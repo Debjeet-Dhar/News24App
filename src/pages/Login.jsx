@@ -27,6 +27,10 @@ const Login = () => {
         toast.error("Invalid email or password");
       }
     };
+
+     const handelRegister = () =>{
+        navigate("/login");
+      }
   
     return (
         <div className="outside min-h-screen mx-auto">
@@ -78,7 +82,7 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    <p className="max-w-lg text-lg font-semibold mt-4 ">Don't Have Any Acoount <span className="text-blue-700">Sign In</span></p>
+                    <p className="max-w-lg text-lg font-semibold mt-4 ">Don't Have Any Acoount <span onClick={handelRegister}  className="text-blue-700">Sign In</span></p>
                     <p className="max-w-sm mt-8 text-center font-semibold">
                         By signing up to News24 you are accepting our <span className="font-bold">Terms & Conditions</span></p>
                 </div>
@@ -86,5 +90,6 @@ const Login = () => {
         </div>
     )
 }
+
 
 export default Login
