@@ -36,6 +36,10 @@ const Register = () => {
     toast.success("Signup successful! You can now login.");
     navigate("/login");
   };
+
+    const handelLogin = () =>{
+    navigate("/login");
+  }
   return (
     <div className="outside min-h-screen mx-auto">
       <div className="main p-10 flex flex-col items-center justify-center">
@@ -92,7 +96,7 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <p className="max-w-lg text-lg font-semibold mt-4 ">Already Have Acoount <span className="text-blue-700">Login</span></p>
+          <p className="max-w-lg text-lg font-semibold mt-4 ">Already Have Acoount <span onClick={handelLogin}  className="text-blue-700">Login</span></p>
           <p className="max-w-sm mt-8 text-center font-semibold">
             By signing up to News24 you are accepting our <span className="font-bold">Terms & Conditions</span></p>
         </div>
@@ -100,5 +104,6 @@ const Register = () => {
     </div>
   )
 }
+
 
 export default Register
